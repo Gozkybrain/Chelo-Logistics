@@ -1,0 +1,152 @@
+/* General styles for the receipt container */
+.my-flight-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+  margin-left: 20px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Styles for the receipt */
+.receipt {
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 100%;
+  max-width: 800px;
+  background-color: #333;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-image: url('../assets/map.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.receipt-details {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.receipt-end {
+  border-top: 1px solid #ccc;
+  margin-top: 250px;
+  padding-top: 60px;
+}
+
+.receipt:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #222222b3;
+  z-index: 1;
+}
+
+.receipt-header {
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  z-index: 2;
+}
+
+.receipt-section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 2;
+}
+
+.receipt-section p {
+  margin: 5px 0;
+}
+
+.receipt-footer {
+  border-bottom: 1px solid #ccc;
+  margin-top: 10px;
+  padding-top: 10px;
+  position: relative;
+  z-index: 2;
+}
+
+.receipt-buttons {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+
+p {
+  font-size: 16px;
+  color: #333;
+}
+
+strong {
+  font-size: 20px;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 600px) {
+  .my-flight-container {
+    margin: 20px;
+  }
+
+  .receipt {
+    padding: 10px;
+    width: 100%;
+    height: auto;
+  }
+
+  .receipt-header {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .receipt-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .receipt-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .receipt-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .receipt-details {
+    display: block;
+    margin: 5px 0;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  button {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .receipt-end {
+    margin-top: 50px;
+    padding-top: 20px;
+  }
+}

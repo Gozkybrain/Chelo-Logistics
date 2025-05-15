@@ -1,0 +1,299 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #2D2D2C;
+  color: white;
+}
+
+.add-flight-button {
+  background-color: white;
+  color: #007bff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-flight-button:hover {
+  background-color: #e0e0e0;
+}
+
+.cover {
+  margin: 20px auto;
+  max-width: 1200px;
+}
+
+.home-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 10px;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.payment {
+  text-align: left;
+  padding: 20px;
+  width: 100%;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.left-section,
+.right-section {
+  flex: 1;
+  padding: 20px;
+  width: 100%;
+  align-self: center;
+}
+
+.flight-image {
+  width: 100%;
+  border-radius: 8px;
+}
+
+
+.track-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.track-form label {
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.track-form input[type="text"] {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  font-size: 16px;
+}
+
+.track-form button:hover {
+  background-color: #222222;
+}
+
+.right-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tab-container {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.tab-button {
+  flex: 1;
+  padding: 15px 20px;
+  text-align: left;
+  font-size: 16px;
+  font-weight: bold;
+  color: #f4f4f4;
+  background-color: #222;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid #f4f4f4;
+}
+
+.tab-button:hover {
+  background-color: #222;
+}
+
+.tab-button.active {
+  color: #f4f4f4;
+  border-bottom: none;
+  background-color: #2d2d2d;
+}
+
+.top-section {
+  display: flex;
+  padding: 60px 20px;
+  margin: 20px auto;
+  max-width: 1200px;
+}
+
+.top-left {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.top-left h1 {
+  font-size: 46px;
+}
+
+.top-right {
+  flex: 2;
+}
+
+.top-right h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.top-p {
+  font-size: 20px;
+  color: #c6c6c6;
+  margin-bottom: 20px;
+}
+
+.top-button {
+  padding: 10px 30px;
+  font-size: 16px;
+  background-color: #ff8c00;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.top-button:hover {
+  background-color: #222;
+}
+
+.features-section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.why-us {
+  padding: 20px;
+  text-align: center;
+}
+
+.feature-box {
+  flex: 1 1 calc(25% - 20px);
+  background-color: #222222;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.feature-box:hover {
+  transform: translateY(-10px);
+}
+
+.feature-box img {
+  width: 70%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.feature-box h3 {
+  font-size: 20px;
+  color: #f4f4f4;
+  margin-bottom: 10px;
+}
+
+.feature-box p {
+  font-size: 16px;
+  color: #c6c6c6;
+}
+
+.about-content {
+  margin-top: 20px;
+}
+
+.about-content h3 {
+  font-size: 24px;
+  color: #f4f4f4;
+  margin-bottom: 10px;
+}
+
+.about-content p {
+  font-size: 20px;
+  color: #c6c6c6;
+  word-spacing: 5px;
+  margin-bottom: 20px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.contact-icon {
+  font-size: 40px;
+  color: #f4f4f4;
+  margin-bottom: 10px;
+}
+
+.contact-info h3 {
+  font-size: 24px;
+  color: #f4f4f4;
+  margin-bottom: 10px;
+}
+
+.contact-info p {
+  font-size: 16px;
+  color: #c6c6c6;
+}
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .left-section,
+  .right-section {
+    padding: 10px;
+    max-width: 100%;
+  }
+
+  .track-form input[type="text"] {
+    padding: 8px;
+  }
+
+  .track-form button {
+    padding: 8px 16px;
+  }
+
+  .partner-image {
+    width: 80px;
+  }
+
+  .cover {
+    padding: 20px;
+    margin: 20px 10px;
+    max-width: 900px;
+    border-radius: 8px;
+  }
+
+  .feature-box {
+    flex: 1 1 100%;
+  }
+}
+
+/* For tablets */
+@media (max-width: 950px) {
+  .feature-box {
+    flex: 1 1 calc(50% - 20px);
+  }
+
+  .top-section {
+    display: block;
+  }
+
+  .top-left {
+    padding: 20px 0;
+  }
+}

@@ -15,6 +15,7 @@ import NotFound from './pages/NotFound';
 import './App.css';
 import Header from './components/Header';
 import MyShipment from './pages/MyShipment';
+import Footer from './components/Footer';
 
 const App = () => {
   return (
@@ -39,6 +40,7 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/*" element={<NotFound />} />
         </Routes>
+        <Footer />
       </div>
     </div>
   );

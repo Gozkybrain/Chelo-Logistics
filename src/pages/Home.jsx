@@ -7,6 +7,7 @@ import truck from '../assets/icon_truck.png';
 import ship from '../assets/icon_ship.png';
 import flight from '../assets/icon_new_2.png';
 import Loader from '../components/Loader';
+import HeroSection from '../components/HeroSection';
 
 
 const Home = () => {
@@ -42,6 +43,7 @@ const Home = () => {
     return (
         <div>
             {/* Cover Container for Main Contents */}
+            <HeroSection />
             <div className="top-section">
                 <div className="top-left">
                     <h1>Leading Courier Delivery and Logistics Company</h1>

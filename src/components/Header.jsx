@@ -115,7 +115,7 @@ const Header = () => {
     
                     {/* Mobile Nested Dropdown */}
                     <div className="mobile-dropdown">
-                        <strong>Bookings </strong>
+                    <strong>Bookings </strong>
                         <ul className="nested-menu">
                             <li><Link to="/add-package" className={location.pathname === "/add-package" ? "active-link" : ""} onClick={() => setIsOpen(false)}>Add Shipment</Link></li>
                             <li><Link to="/all-packages" className={location.pathname === "/all-packages" ? "active-link" : ""} onClick={() => setIsOpen(false)}>All Shipments</Link></li>

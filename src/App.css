@@ -5,8 +5,8 @@ body {
   font-family: 'Asap Condensed', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #2D2D2D;
-  color: #f4f4f4;
+  background-color: #F9F9F9;
+  color: #2D2D2D;
 }
 
 
@@ -24,7 +24,8 @@ h3,
 h4,
 p,
 div {
-  color: #f4f4f4;
+  font-family: 'Asap Condensed', sans-serif;
+  color: #2d2d2d;
 }
 
 .App-logo {
@@ -62,3 +63,78 @@ div {
     transform: rotate(360deg);
   }
 }
+
+
+.footer {
+  background-color: #222;
+  color: white;
+  padding: 50px 0 20px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.footer-section {
+  flex: 1;
+  margin-right: 30px;
+}
+
+.footer-section h3 {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  color: #ff6b00;
+}
+
+.footer-section p {
+  margin-bottom: 10px;
+  color: #ccc;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #ff6b00;
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 30px;
+  border-top: 1px solid #444;
+  margin-top: 40px;
+}
+
+.footer-bottom p {
+  color: #999;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .footer-section {
+    margin-bottom: 30px;
+    margin-right: 0;
+  }
+}
+
+

@@ -7,6 +7,7 @@
   color: white;
 }
 
+
 .add-flight-button {
   background-color: white;
   color: #007bff;
@@ -115,18 +116,20 @@
 }
 
 .top-section {
+  background-color: #222222;
   display: flex;
   padding: 60px 20px;
   margin: 20px auto;
-  max-width: 1200px;
 }
 
 .top-left {
   flex: 1;
   padding-right: 20px;
+  color: #f4f4f4;
 }
 
 .top-left h1 {
+  color: #f4f4f4;
   font-size: 46px;
 }
 
@@ -135,6 +138,7 @@
 }
 
 .top-right h3 {
+  color: #f4f4f4;
   font-size: 24px;
   margin-bottom: 10px;
 }
@@ -169,16 +173,21 @@
 }
 
 .why-us {
-  padding: 20px;
+  padding: 40px 20px;
   text-align: center;
+}
+
+.why-us h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
 }
 
 .feature-box {
   flex: 1 1 calc(25% - 20px);
-  background-color: #222222;
+  background-color: #ffffff;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
   text-align: center;
 }
@@ -196,13 +205,12 @@
 
 .feature-box h3 {
   font-size: 20px;
-  color: #f4f4f4;
+  color: #ff6b00;
   margin-bottom: 10px;
 }
 
 .feature-box p {
   font-size: 16px;
-  color: #c6c6c6;
 }
 
 .about-content {

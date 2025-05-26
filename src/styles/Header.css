@@ -22,7 +22,7 @@
   
   /* Header gets solid on scroll */
   .header.scrolled {
-    background-color: #222; /* or whatever color fits your brand */
+    background-color: #222; 
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   }
   

@@ -4,11 +4,13 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin-top: -100px;
+  background-color: #2d2d2d;
+  color: #f4f4f4;
 }
 
 .loader-content {
   text-align: center;
+  color: #f4f4f4;
 }
 
 .loader-text {

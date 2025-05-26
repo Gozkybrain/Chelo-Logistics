@@ -16,6 +16,7 @@ import './App.css';
 import Header from './components/Header';
 import MyShipment from './pages/MyShipment';
 import Footer from './components/Footer';
+import Track from './pages/Track';
 
 const App = () => {
   return (
@@ -29,7 +30,7 @@ const App = () => {
           <Route path="/contact-us" element={<Contact />} />
           <Route path="/all-tickets" element={<AllTickets />} />
           <Route path="/all-packages" element={<AllPackages />} />
-          <Route path="/track-package" element={<Home />} />
+          <Route path="/track-package" element={<Track />} />
           <Route path="/track-flight" element={<Home />} />
           <Route path="/my-flight" element={<MyFlight />} />
           <Route path="/add-ticket" element={<AddTicket />} />

@@ -60,7 +60,6 @@ const Header = () => {
                 <nav className="nav-links">
                     <Link to="/about-us" className={location.pathname === "/about-us" ? "active-link" : ""}>About Us</Link>
                     <Link to="/track-package" className={location.pathname === "/track-package" ? "active-link" : ""}>Track a Package</Link>
-                    <Link to="/track-flight" className={location.pathname === "/track-flight" ? "active-link" : ""}>Track a Ticket</Link>
                     <Link
                         className="dropdown"
                         onMouseEnter={() => setIsDropdownOpen(true)}
@@ -73,11 +72,6 @@ const Header = () => {
                                     <h4>Shipments</h4>
                                     <Link to="/add-package" onClick={() => setIsDropdownOpen(false)}>Add Shipment</Link>
                                     <Link to="/all-packages" onClick={() => setIsDropdownOpen(false)}>All Shipments</Link>
-                                </div>
-                                <div className="dropdown-box">
-                                    <h4>Tickets</h4>
-                                    <Link to="/add-ticket" onClick={() => setIsDropdownOpen(false)}>Add Ticket</Link>
-                                    <Link to="/all-tickets" onClick={() => setIsDropdownOpen(false)}>All Tickets</Link>
                                 </div>
                                 {user && (
                                     <button className="logout-btn" onClick={handleLogout}>
@@ -113,15 +107,12 @@ const Header = () => {
 
                     <Link to="/about-us" onClick={() => setIsOpen(false)}>About Us</Link>
                     <Link to="/track-package" onClick={() => setIsOpen(false)}>Track a Package</Link>
-                    <Link to="/track-flight" onClick={() => setIsOpen(false)}>Track a Ticket</Link>
 
                     <div className="mobile-dropdown">
                         <strong>Bookings</strong>
                         <ul className="nested-menu">
                             <li><Link to="/add-package" onClick={() => setIsOpen(false)}>Add Shipment</Link></li>
                             <li><Link to="/all-packages" onClick={() => setIsOpen(false)}>All Shipments</Link></li>
-                            <li><Link to="/add-ticket" onClick={() => setIsOpen(false)}>Add Ticket</Link></li>
-                            <li><Link to="/all-tickets" onClick={() => setIsOpen(false)}>All Tickets</Link></li>
                         </ul>
                     </div>
 

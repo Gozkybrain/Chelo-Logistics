@@ -1,20 +1,76 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/home.css';
-import bookMe from '../assets/landing.png';
 import train from '../assets/icon_train.png';
 import truck from '../assets/icon_truck.png';
 import ship from '../assets/icon_ship.png';
 import flight from '../assets/icon_new_2.png';
 import Loader from '../components/Loader';
-import HeroSection from '../components/HeroSection';
 
 
 const Track = () => {
     const [trackingCode, setTrackingCode] = useState('');
-    const [activeTab, setActiveTab] = useState('package');
     const [isLoading, setIsLoading] = useState(true);
     const navigate = useNavigate();
+    const [currentSlide, setCurrentSlide] = useState(0)
+    const reasons = [
+        {
+            id: 1,
+            icon: "clock",
+            title: "Fast Delivery",
+            description: "We prioritize speed without compromising safety for all your shipments.",
+        },
+        {
+            id: 2,
+            icon: "shield",
+            title: "Secure Handling",
+            description: "Your packages are handled with utmost care and security throughout transit.",
+        },
+        {
+            id: 3,
+            icon: "globe",
+            title: "Global Coverage",
+            description: "Our extensive network ensures delivery to virtually any destination worldwide.",
+        },
+        {
+            id: 4,
+            icon: "dollar",
+            title: "Competitive Pricing",
+            description: "We offer the best rates in the industry without compromising on service quality.",
+        },
+        {
+            id: 5,
+            icon: "headset",
+            title: "24/7 Support",
+            description: "Our customer service team is available round the clock to assist you.",
+        },
+    ]
+    const images = ["/images/hero-0.jpeg", "/images/hero-6.jpg", "/images/hero.webp"]
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentSlide((prevSlide) => (prevSlide + 1) % images.length)
+        }, 5000)
+
+        // Add scroll event listener to change header background
+        const handleScroll = () => {
+            const header = document.querySelector(".header")
+            if (header) {
+                if (window.scrollY > 50) {
+                    header.classList.add("scrolled")
+                } else {
+                    header.classList.remove("scrolled")
+                }
+            }
+        }
+
+        window.addEventListener("scroll", handleScroll)
+
+        return () => {
+            clearInterval(interval)
+            window.removeEventListener("scroll", handleScroll)
+        }
+    }, [images.length])
 
     // Simulate fetching data or network delay
     useEffect(() => {
@@ -28,11 +84,7 @@ const Track = () => {
 
     // Handle form submission based on active tab
     const handleTrack = () => {
-        if (activeTab === 'package') {
-            navigate(`/track-shipment?code=${trackingCode}`);
-        } else if (activeTab === 'ticket') {
-            navigate(`/my-flight?code=${trackingCode}`);
-        }
+        navigate(`/track-shipment?code=${trackingCode}`);
     };
 
     // Show loader while isLoading is true
@@ -43,7 +95,39 @@ const Track = () => {
     return (
         <div>
             {/* Cover Container for Main Contents */}
-            <HeroSection />
+            <section id="home" className="hero-section">
+                <div className="carousel">
+                    {images.map((image, index) => (
+                        <div
+                            key={index}
+                            className={`carousel-slide ${index === currentSlide ? "active" : ""}`}
+                            style={{ backgroundImage: `url(${image})` }}
+                        />
+                    ))}
+                </div>
+                <div className="hero-content">
+                    <strong>Tracking, Track Parcels, Packages, Shipments
+                    </strong>
+                    <h1>Fast & Reliable Shipping Solutions</h1>
+                    {/* Tracking Form */}
+                    <form
+                        className="track-form"
+                        onSubmit={(e) => { e.preventDefault(); handleTrack(); }}
+                    >
+                        <label>Enter Tracking Code:</label>
+                        <input
+                            type="text"
+                            placeholder='example: 1234567890'
+                            value={trackingCode}
+                            onChange={(e) => setTrackingCode(e.target.value)}
+                            required
+                        />
+                        <button className='logout-button' type="submit">
+                            Track Package
+                        </button>
+                    </form>
+                </div>
+            </section>
             <div className='why-us'>
                 <strong>WORLDWIDE FREIGHT FORWARDING AND LOGISTICS SERVICES</strong>
                 <h1>Why Choose us?</h1>
@@ -84,51 +168,106 @@ const Track = () => {
                 </div>
             </div>
 
-            <div className='cover'>
-                <div className="home-container">
-                    {/* Image at the left section */}
-                    <div className="left-section">
-                        <img src={bookMe} alt="Flight" className="flight-image" />
-                    </div>
+            <section id="why-us" className="why-choose-us">
+                <div className="container why-us">
+                    <strong className='section-description'>WHY CHOOSE US</strong>
+                    <h2>THE MAIN FEATURES</h2>
+                    <p className="section-description">
+                        We stand out from the competition with our commitment to excellence, reliability, and customer satisfaction.
+                        <br />
+                        100% COMMITTED TO BRINGING IN AND DEVELOPING TALENT ACROSS ALL LEVELS OF THE ORGANISATION.
+                    </p>
 
-                    {/* Tracking form at the right section */}
-                    <div className="left-section">
-                        {/* Tab System */}
-                        <div className="tab-container">
-                            <button
-                                className={`tab-button ${activeTab === 'package' ? 'active' : ''}`}
-                                onClick={() => setActiveTab('package')}
-                            >
-                                Track a Package
-                            </button>
-                            <button
-                                className={`tab-button ${activeTab === 'ticket' ? 'active' : ''}`}
-                                onClick={() => setActiveTab('ticket')}
-                            >
-                                Flight Ticket
-                            </button>
+                    <div className="content-container">
+                        <div className="reasons-container">
+                            {reasons.map((reason) => (
+                                <div key={reason.id} className="reason-item">
+                                    <div className="reason-content">
+                                        <h3>{reason.title}</h3>
+                                        <p>{reason.description}</p>
+                                    </div>
+                                    <div className="reason-icon">
+                                        {reason.icon === "clock" && (
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                strokeWidth="2"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                            >
+                                                <circle cx="12" cy="12" r="10"></circle>
+                                                <polyline points="12 6 12 12 16 14"></polyline>
+                                            </svg>
+                                        )}
+                                        {reason.icon === "shield" && (
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                strokeWidth="2"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                            >
+                                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                            </svg>
+                                        )}
+                                        {reason.icon === "globe" && (
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                strokeWidth="2"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                            >
+                                                <circle cx="12" cy="12" r="10"></circle>
+                                                <line x1="2" y1="12" x2="22" y2="12"></line>
+                                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                                            </svg>
+                                        )}
+                                        {reason.icon === "dollar" && (
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                strokeWidth="2"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                            >
+                                                <line x1="12" y1="1" x2="12" y2="23"></line>
+                                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                            </svg>
+                                        )}
+                                        {reason.icon === "headset" && (
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                strokeWidth="2"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                            >
+                                                <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+                                                <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
+                                            </svg>
+                                        )}
+                                    </div>
+                                </div>
+                            ))}
                         </div>
 
-                        {/* Tracking Form */}
-                        <form
-                            className="track-form"
-                            onSubmit={(e) => { e.preventDefault(); handleTrack(); }}
-                        >
-                            <label>Enter Tracking Code:</label>
-                            <input
-                                type="text"
-                                placeholder='example: 1234567890'
-                                value={trackingCode}
-                                onChange={(e) => setTrackingCode(e.target.value)}
-                                required
-                            />
-                            <button className='logout-button' type="submit">
-                                {activeTab === 'package' ? 'Track Package' : 'Track Ticket'}
-                            </button>
-                        </form>
+                        <div className="image-container">
+                            <img src="/images/logistic.png" alt="Logistics Center" />
+                        </div>
                     </div>
                 </div>
-            </div>
+            </section>
         </div>
     );
 };

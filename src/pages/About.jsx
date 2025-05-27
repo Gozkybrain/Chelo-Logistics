@@ -94,7 +94,7 @@ const About = () => {
                         <div className="contact-info">
                             <MdLocationOn className="contact-icon" />
                             <h3>Warehouse Address</h3>
-                            <p>147 24 176th St, Queens, NY 11434, United States</p>
+                            <p>Grand Rapids, MI, United States</p>
                         </div>
                     </div>
                 </div>

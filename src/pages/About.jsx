@@ -1,24 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/home.css'; // Reuse the same styles
-import bookMe from '../assets/consult-man.png';
 import train from '../assets/icon_train.png';
 import truck from '../assets/icon_truck.png';
 import ship from '../assets/icon_ship.png';
 import flight from '../assets/icon_new_2.png';
 import Loader from '../components/Loader';
-import { MdEmail, MdLocationOn } from 'react-icons/md'; 
+import { MdEmail, MdLocationOn, MdPhoneAndroid } from 'react-icons/md';
 
 const About = () => {
-    const [isLoading, setIsLoading] = useState(true); 
+    const bookMe = '/images/hero-2.jpeg';
+    const [isLoading, setIsLoading] = useState(true);
 
     // Simulate fetching data or network delay
     useEffect(() => {
         const timer = setTimeout(() => {
             // Set loading to false after 2 seconds (simulate fetch)
-            setIsLoading(false); 
+            setIsLoading(false);
         }, 2000);
-// Cleanup timer
-        return () => clearTimeout(timer); 
+        // Cleanup timer
+        return () => clearTimeout(timer);
     }, []);
 
     // Show loader while isLoading is true
@@ -27,7 +27,7 @@ const About = () => {
     }
 
     return (
-        <div>
+        <div className=''>
             {/* Cover Container for Main Contents */}
             <div className="top-section">
                 <div className="top-left">
@@ -53,24 +53,19 @@ const About = () => {
                     <div className="left-section">
                         <h1>Our Services</h1>
                         <div className="about-content">
-                            <h2>Warehouse Services</h2>
+                            <h3>Warehouse Services</h3>
                             <p>
-                                We offer state-of-the-art warehousing solutions to ensure your goods are stored safely and efficiently. Our facilities are equipped with advanced security systems and climate control to meet your specific requirements.
+                                We offer state-of-the-art warehousing solutions to ensure your goods are stored safely and efficiently.
                             </p>
 
-                            <h2>24/7 Support</h2>
+                            <h3>24/7 Support</h3>
                             <p>
-                                Our dedicated support team is available around the clock to assist you with any queries or issues. Whether it's tracking your shipment or resolving a concern, we're here to help.
+                                Our dedicated support team is available around the clock to assist you with any queries or issues.
                             </p>
 
-                            <h2>Online Tracking</h2>
+                            <h3>Online Tracking</h3>
                             <p>
-                                With our advanced online tracking system, you can monitor your shipments in real-time. Stay updated on the status of your package from pickup to delivery.
-                            </p>
-
-                            <h2>Insurance</h2>
-                            <p>
-                                We provide comprehensive insurance options to protect your goods during transit. Rest assured that your shipments are covered against any unforeseen events.
+                                With our advanced online tracking system, you can monitor your shipments in real-time.
                             </p>
                         </div>
                     </div>
@@ -85,14 +80,21 @@ const About = () => {
                         <div className="contact-info">
                             <MdEmail className="contact-icon" />
                             <h3>Email Address</h3>
-                            <p>support@couriercompany.com</p>
+                            <p>kreslineexpress.com</p>
+                        </div>
+                    </div>
+                    <div className="feature-box">
+                        <div className="contact-info">
+                            <MdPhoneAndroid className="contact-icon" />
+                            <h3>Contact Number</h3>
+                            <p>+17075646012</p>
                         </div>
                     </div>
                     <div className="feature-box">
                         <div className="contact-info">
                             <MdLocationOn className="contact-icon" />
                             <h3>Warehouse Address</h3>
-                            <p>123 Logistics Street, Suite 456, Cityville, Country</p>
+                            <p>147 24 176th St, Queens, NY 11434, United States</p>
                         </div>
                     </div>
                 </div>
@@ -124,6 +126,64 @@ const About = () => {
                     </div>
                 </div>
             </div>
+
+            <section id="about" className="middle-section">
+                <div className="container">
+                    <h2>Our Global Network</h2>
+                    <p className="section-description">
+                        With our extensive global network, we provide seamless shipping solutions across continents, ensuring your
+                        packages arrive safely and on time, no matter the destination.
+                    </p>
+
+                    <div className="boxes-container">
+                        <div className="side-box left">
+                            <div>
+                                <h3>111,380</h3>
+                                <p>
+                                    Satisfied Customers
+                                </p>
+                            </div>
+                            <div>
+                                <h3>1,763</h3>
+                                <p>
+                                    Workers in team
+                                </p>
+                            </div>
+                            <div>
+                                <h3>77</h3>
+                                <p>
+                                    Awards Won
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className="middle-box">
+                            <img src="/images/truck-bg.png" alt="Global Shipping" />
+                        </div>
+
+                        <div className="side-box right">
+                            <div>
+                                <h3>568</h3>
+                                <p>
+                                    Vehicles owned
+                                </p>
+                            </div>
+                            <div>
+                                <h3>1,207</h3>
+                                <p>
+                                    Secure Warehouse
+                                </p>
+                            </div>
+                            <div>
+                                <h3>1,000,000+</h3>
+                                <p>
+                                    Items Delivered
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     );
 };

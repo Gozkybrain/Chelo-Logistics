@@ -118,8 +118,8 @@
 .top-section {
   background-color: #222222;
   display: flex;
-  padding: 60px 20px;
-  margin: 20px auto;
+  padding: 150px 20px 60px 20px;
+  /* margin: 20px auto; */
 }
 
 .top-left {
@@ -219,14 +219,12 @@
 
 .about-content h3 {
   font-size: 24px;
-  color: #f4f4f4;
   margin-bottom: 10px;
 }
 
 .about-content p {
   font-size: 20px;
-  color: #c6c6c6;
-  word-spacing: 5px;
+  word-spacing: 3px;
   margin-bottom: 20px;
 }
 
@@ -239,19 +237,17 @@
 
 .contact-icon {
   font-size: 40px;
-  color: #f4f4f4;
+  color: #FF6B00;
   margin-bottom: 10px;
 }
 
 .contact-info h3 {
   font-size: 24px;
-  color: #f4f4f4;
   margin-bottom: 10px;
 }
 
 .contact-info p {
   font-size: 16px;
-  color: #c6c6c6;
 }
 
 /* Media Query for Mobile */

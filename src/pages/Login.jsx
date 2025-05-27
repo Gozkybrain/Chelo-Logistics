@@ -47,7 +47,7 @@ const Login = () => {
       await signInWithEmailAndPassword(auth, email, password);
 
       // Get the last visited page or default to "/add-ticket"
-      const lastPage = localStorage.getItem('lastPage') || '/add-ticket';
+      const lastPage = localStorage.getItem('lastPage') || '/all-packages';
       navigate(lastPage);
     } catch (error) {
       console.error("Error logging in: ", error);

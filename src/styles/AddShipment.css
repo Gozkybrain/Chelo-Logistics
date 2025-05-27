@@ -3,12 +3,23 @@
   color: #fff;
   max-width: 800px;
   margin: auto;
+  margin-top: 100px;
   padding: 20px;
   border-radius: 8px;
+
+  h2 {
+    color: #fff;
+  }
+}
+
+.wrappers {
+  background: linear-gradient(135deg, #003366, #007bff);
+  padding: 20px;
 }
 
 .add-shipment-container h1 {
   text-align: center;
+  color: #fff;
   margin-bottom: 20px;
 }
 
@@ -41,6 +52,8 @@ label {
   display: block;
   font-size: 14px;
   margin-bottom: 10px;
+  color: #fff;
+
 }
 
 input,
@@ -87,6 +100,14 @@ button:hover {
   text-align: center;
   max-width: 400px;
   margin: auto;
+
+  h2 {
+    color: #fff;
+  }
+
+  p {
+    color: #fff;
+  }
 }
 
 .overlaid {

@@ -1,7 +1,9 @@
 /* MyShipment.css */
 .my-shipment-container {
     padding: 20px;
+    padding-top: 120px;
     margin: 0 auto;
+    background-color: #bfbfbf2e;
 }
 
 .tracking-layout {
@@ -11,9 +13,9 @@
 
 .tracking-details {
     flex: 1;
-    background-color: #222222;
+    background-color: #f4f4f4;
     padding: 20px;
-    color: #f4f4f4;
+    color: #2d2d2d;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -35,19 +37,19 @@
 }
 
 .track-box {
-    background-color: #222222;
+    background-color: #f4f4f4;
     padding: 20px;
 }
 
 .track-head {
     margin-bottom: 10px;
     text-align: center;
-    color: #f4f4f4;
+    color: #2d2d2d;
 }
 
 .track-box .track-details {
     font-size: 1rem;
-    color: #ccc;
+    color: #2d2d2d;
     margin-bottom: 20px;
 }
 
@@ -141,9 +143,9 @@
 .info-box {
     flex: 1;
     padding: 20px;
-    border: 1px solid #2d2d2d;
+    color: #2d2d2d;
     border-radius: 8px;
-    background-color: #222222;
+    background-color: #f4f4f4;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -156,7 +158,6 @@
     margin: 8px 0;
     font-size: 16px;
     margin-bottom: 20px;
-    color: #ccc;
 
 }
 
@@ -193,7 +194,8 @@
         display: flex;
     }
 
-    .tracking-details, .info-box {
+    .tracking-details,
+    .info-box {
         margin-bottom: 10px;
     }
 }

@@ -1,5 +1,12 @@
 .all-tickets-container {
     padding: 20px;
+    background: linear-gradient(135deg, #003366, #007bff);
+    padding-top: 150px;
+
+
+    h1 {
+        color: #f4f4f4;
+    }
 }
 
 table {
@@ -11,6 +18,7 @@ table {
 table th,
 table td {
     border: 1px solid #ddd;
+    color: #f4f4f4;
     padding: 15px 10px;
     text-align: left;
 }
@@ -51,6 +59,7 @@ table th {
 
 .edit-form h2 {
     margin-top: 20px;
+    color: #f4f4f4;
 }
 
 .edit-form.open {
@@ -77,34 +86,39 @@ table th {
     border: 1px solid #ccc;
     border-radius: 5px;
     outline: none;
-    width: 40%; 
-  }
-  
+    width: 40%;
+}
+
 .tracking-number-container {
     display: flex;
+    color: #f4f4f4;
     align-items: center;
     justify-content: space-between;
     padding: 8px;
-  }
-  
-  .tracking-number-container span {
+
+    h4 {
+    color: #f4f4f4;
+    }
+}
+
+.tracking-number-container span {
     font-weight: bold;
-  }
-  
-  .icon-container {
+}
+
+.icon-container {
     display: flex;
-    gap: 10px; 
-  }
-  
-  .icon {
+    gap: 10px;
+}
+
+.icon {
     cursor: pointer;
     color: #ff8c00;
     transition: color 0.3s ease;
-  }
-  
-  .icon:hover {
+}
+
+.icon:hover {
     color: #f4f4f4;
-  }
+}
 
 @media (max-width: 768px) {
     .hide-on-mobile {

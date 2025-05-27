@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { db, auth } from '../lib/firebase';
 import { collection, addDoc } from 'firebase/firestore';
 import generateTrackingNumber from '../utils/generateTrackingNumber';
-import '../styles/AddShipment.css'; 
+import '../styles/AddShipment.css';
 import Modal from 'react-modal';
 import Loader from '../components/Loader';
 
@@ -35,7 +35,7 @@ const AddPackage = () => {
             location5: '',
             destination: '',
         },
-        currentLocation: '', 
+        currentLocation: '',
     };
 
     const [packageDetails, setPackageDetails] = useState(initialPackageDetails);
@@ -88,23 +88,23 @@ const AddPackage = () => {
     // Handle form submission
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setLoading(true); 
+        setLoading(true);
 
         try {
-            await addDoc(collection(db, 'shipments'), {
+            await addDoc(collection(db, 'shipment-hush'), {
                 ...packageDetails,
                 trackingNumber,
                 username: user.email,
             });
             console.log('Package added successfully');
-            setModalIsOpen(true); 
+            setModalIsOpen(true);
 
             // Reset form after successful submission
             setPackageDetails(initialPackageDetails);
         } catch (error) {
             console.error('Error adding document: ', error);
         } finally {
-            setLoading(false); 
+            setLoading(false);
         }
     };
 
@@ -144,7 +144,8 @@ const AddPackage = () => {
     };
 
     return (
-        <div>
+        <div className="wrappers">
+
             {/* Display loader while waiting */}
             {loading && (
                 <div className="overlay-loader">

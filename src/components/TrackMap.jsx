@@ -265,7 +265,7 @@ const TrackMap = ({ shipment }) => {
                         top: '50%',
                         left: '50%',
                         transform: 'translate(-50%, -50%)',
-                        backgroundColor: '#222222',
+                        backgroundColor: '#f4f4f4',
                         padding: '10px 20px',
                         borderRadius: '5px',
                         boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)',

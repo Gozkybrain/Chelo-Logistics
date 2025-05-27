@@ -138,3 +138,14 @@ div {
 }
 
 
+  /* for google translate */
+  .translate-container {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 9999;
+    background: white;
+    border-radius: 8px;
+    padding: 6px 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }

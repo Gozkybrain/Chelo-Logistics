@@ -39,5 +39,21 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        setTimeout(() => {
+          if (typeof google !== 'undefined' && google.translate) {
+            new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+          }
+        }, 1000); // Delay of 1 second to allow React to render the target element
+      }
+    
+      window.onload = function () {
+        if (typeof google !== 'undefined' && google.translate) {
+          googleTranslateElementInit();
+        }
+      };
+    </script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   </body>
 </html>

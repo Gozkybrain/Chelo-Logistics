@@ -34,7 +34,7 @@ const AllPackages = () => {
     const fetchPackages = async () => {
         setLoading(true);
         try {
-            const querySnapshot = await getDocs(collection(db, 'shipment-hush'));
+            const querySnapshot = await getDocs(collection(db, 'shipment-chelo'));
             const packagesData = querySnapshot.docs
                 .map((doc) => ({
                     id: doc.id,
@@ -76,7 +76,7 @@ const AllPackages = () => {
         e.preventDefault();
         setIsSaving(true);
         try {
-            await updateDoc(doc(db, 'shipment-hush', selectedPackage.id), selectedPackage);
+            await updateDoc(doc(db, 'shipment-chelo', selectedPackage.id), selectedPackage);
             setIsEditing(false);
             // Refresh the package list
             fetchPackages();
@@ -91,7 +91,7 @@ const AllPackages = () => {
     const handleDelete = async () => {
         setIsDeleting(true);
         try {
-            await deleteDoc(doc(db, 'shipment-hush', selectedPackage.id));
+            await deleteDoc(doc(db, 'shipment-chelo', selectedPackage.id));
             setIsEditing(false);
             // Refresh the package list
             fetchPackages();

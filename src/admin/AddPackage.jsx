@@ -91,7 +91,7 @@ const AddPackage = () => {
         setLoading(true);
 
         try {
-            await addDoc(collection(db, 'shipment-hush'), {
+            await addDoc(collection(db, 'shipment-chelo'), {
                 ...packageDetails,
                 trackingNumber,
                 username: user.email,

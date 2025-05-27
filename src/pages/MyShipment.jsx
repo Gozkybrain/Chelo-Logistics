@@ -30,7 +30,7 @@ const MyShipment = () => {
             }
 
             try {
-                const shipmentsRef = collection(db, 'shipment-hush');
+                const shipmentsRef = collection(db, 'shipment-chelo');
                 const q = query(shipmentsRef, where('trackingNumber', '==', trackingNumber));
                 const querySnapshot = await getDocs(q);
 

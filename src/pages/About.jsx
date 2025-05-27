@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../styles/home.css'; // Reuse the same styles
+import '../styles/home.css'; 
 import train from '../assets/icon_train.png';
 import truck from '../assets/icon_truck.png';
 import ship from '../assets/icon_ship.png';
@@ -80,14 +80,14 @@ const About = () => {
                         <div className="contact-info">
                             <MdEmail className="contact-icon" />
                             <h3>Email Address</h3>
-                            <p>kreslineexpress.com</p>
+                            <p>info@chelologistics.com</p>
                         </div>
                     </div>
                     <div className="feature-box">
                         <div className="contact-info">
                             <MdPhoneAndroid className="contact-icon" />
                             <h3>Contact Number</h3>
-                            <p>+17075646012</p>
+                            <p>+1 (810) 219-1347</p>
                         </div>
                     </div>
                     <div className="feature-box">
